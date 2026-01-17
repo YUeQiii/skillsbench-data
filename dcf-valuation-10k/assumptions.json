@@ -1,0 +1,52 @@
+{
+  "default_assumptions": {
+    "risk_free_rate": 0.045,
+    "market_risk_premium": 0.07,
+    "terminal_growth_rate": 0.025,
+    "projection_years": 5,
+    "notes": {
+      "risk_free_rate": "10-year US Treasury yield",
+      "beta": "Measures stock volatility vs market",
+      "market_risk_premium": "Expected return above risk-free rate",
+      "terminal_growth_rate": "Perpetual growth rate assumption"
+    }
+  },
+  "companies": [
+    {
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "report_file": "APPLE-10K-FY2024.pdf",
+      "fiscal_year_end": "2024",
+      "beta": 1.2,
+      "current_stock_price": 185.0,
+      "shares_outstanding": 15000000000
+    },
+    {
+      "name": "Alphabet Inc.",
+      "ticker": "GOOGL",
+      "report_file": "GOOGLE-10K-FY2024.pdf",
+      "fiscal_year_end": "2024",
+      "beta": 1.1,
+      "current_stock_price": null,
+      "shares_outstanding": null
+    },
+    {
+      "name": "Microsoft Corporation",
+      "ticker": "MSFT",
+      "report_file": "MICROSOFT-10K-FY2025.pdf",
+      "fiscal_year_end": "2025",
+      "beta": 1.15,
+      "current_stock_price": null,
+      "shares_outstanding": null
+    },
+    {
+      "name": "NVIDIA Corporation",
+      "ticker": "NVDA",
+      "report_file": "NVIDIA-10K-FY2025.pdf",
+      "fiscal_year_end": "2025",
+      "beta": 1.4,
+      "current_stock_price": null,
+      "shares_outstanding": null
+    }
+  ]
+}
