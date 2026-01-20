@@ -274,15 +274,43 @@ def fetch_contracts_and_history(symbol, sample_dates, exp_from, exp_to, strike_f
     print(f"\nFound {len(unique_contracts)} unique contracts")
     print(f"Filtering to manageable subset...")
 
-    # Keep only every $5 strike
+    # Aggressive filtering to reduce API calls to ~1500-2000 contracts (target 1-2 hours)
+
+    strike_col = None
+    exp_col = None
+
+    # Filter 1: Keep only every $20 strike (wider spacing)
     if 'strike' in contracts_df.columns or 'Strike' in contracts_df.columns:
         strike_col = 'strike' if 'strike' in contracts_df.columns else 'Strike'
-        contracts_df = contracts_df[contracts_df[strike_col] % 5 == 0]
-        unique_contracts = contracts_df[option_col].unique()
-        print(f"After $5 strike filter: {len(unique_contracts)} contracts")
+        contracts_df = contracts_df[contracts_df[strike_col] % 20 == 0]
+        print(f"After $20 strike filter: {len(contracts_df)} rows")
 
-    # Limit to top expirations by volume/OI if available
-    # (Skip this filter if data is already manageable)
+    # Filter 2: Tighter strike range around realistic trading zone
+    # SPY 2024: ~480-610, so keep 460-640 (±20% buffer)
+    if strike_col:
+        contracts_df = contracts_df[
+            (contracts_df[strike_col] >= 460) &
+            (contracts_df[strike_col] <= 640)
+        ]
+        print(f"After strike range filter (460-640): {len(contracts_df)} rows")
+
+    # Filter 3: Keep only monthly expirations (3rd Friday)
+    if 'expiration' in contracts_df.columns or 'Expiration' in contracts_df.columns:
+        exp_col = 'expiration' if 'expiration' in contracts_df.columns else 'Expiration'
+        contracts_df[exp_col] = pd.to_datetime(contracts_df[exp_col])
+        # Monthly expirations: day 15-21
+        contracts_df = contracts_df[contracts_df[exp_col].dt.day.between(15, 21)]
+        print(f"After monthly expiration filter: {len(contracts_df)} rows")
+
+    # Filter 4: Keep only quarterly expirations (reduce further if still too many)
+    # Quarterly: March, June, September, December
+    if exp_col:
+        quarterly_months = [3, 6, 9, 12]
+        contracts_df = contracts_df[contracts_df[exp_col].dt.month.isin(quarterly_months)]
+        print(f"After quarterly expiration filter: {len(contracts_df)} rows")
+
+    unique_contracts = contracts_df[option_col].unique()
+    print(f"\nFinal contract count: {len(unique_contracts)} contracts")
 
     print(f"\nStep 2: Fetching history for {len(unique_contracts)} contracts...")
     print(f"This will take approximately {len(unique_contracts) * REQUEST_DELAY / 60:.1f} minutes")
