@@ -1,0 +1,128 @@
+{
+  "by_final_pnl": [
+    {
+      "strategy": "iron_butterfly",
+      "final_pnl": 9.314999999999998,
+      "max_pnl": 12.970000000000006,
+      "min_pnl": -1.7700000999999972,
+      "max_drawdown": -1.7700000999999972,
+      "return_pct": 20.38739330269205
+    },
+    {
+      "strategy": "iron_condor",
+      "final_pnl": -1.1850000000000023,
+      "max_pnl": -0.9300000000000139,
+      "min_pnl": -3.4300000000000104,
+      "max_drawdown": -3.4300000000000104,
+      "return_pct": -3.7835249042145658
+    },
+    {
+      "strategy": "short_strangle",
+      "final_pnl": -4.030000000000008,
+      "max_pnl": -0.5600020000000043,
+      "min_pnl": -20.459999995000004,
+      "max_drawdown": -20.459999995000004,
+      "return_pct": -11.884399882040722
+    },
+    {
+      "strategy": "bull_call_spread",
+      "final_pnl": -5.9750000000000005,
+      "max_pnl": -0.07500000000000107,
+      "min_pnl": -9.729999990000001,
+      "max_drawdown": -9.729999990000001,
+      "return_pct": -51.776429809358746
+    },
+    {
+      "strategy": "long_straddle",
+      "final_pnl": -7.014999999999997,
+      "max_pnl": 8.050000100000002,
+      "min_pnl": -7.014999999999997,
+      "max_drawdown": -7.014999999999997,
+      "return_pct": -36.422637590861875
+    }
+  ],
+  "by_return_pct": [
+    {
+      "strategy": "iron_butterfly",
+      "final_pnl": 9.314999999999998,
+      "max_pnl": 12.970000000000006,
+      "min_pnl": -1.7700000999999972,
+      "max_drawdown": -1.7700000999999972,
+      "return_pct": 20.38739330269205
+    },
+    {
+      "strategy": "iron_condor",
+      "final_pnl": -1.1850000000000023,
+      "max_pnl": -0.9300000000000139,
+      "min_pnl": -3.4300000000000104,
+      "max_drawdown": -3.4300000000000104,
+      "return_pct": -3.7835249042145658
+    },
+    {
+      "strategy": "short_strangle",
+      "final_pnl": -4.030000000000008,
+      "max_pnl": -0.5600020000000043,
+      "min_pnl": -20.459999995000004,
+      "max_drawdown": -20.459999995000004,
+      "return_pct": -11.884399882040722
+    },
+    {
+      "strategy": "long_straddle",
+      "final_pnl": -7.014999999999997,
+      "max_pnl": 8.050000100000002,
+      "min_pnl": -7.014999999999997,
+      "max_drawdown": -7.014999999999997,
+      "return_pct": -36.422637590861875
+    },
+    {
+      "strategy": "bull_call_spread",
+      "final_pnl": -5.9750000000000005,
+      "max_pnl": -0.07500000000000107,
+      "min_pnl": -9.729999990000001,
+      "max_drawdown": -9.729999990000001,
+      "return_pct": -51.776429809358746
+    }
+  ],
+  "by_risk_adjusted": [
+    {
+      "strategy": "iron_butterfly",
+      "final_pnl": 9.314999999999998,
+      "max_pnl": 12.970000000000006,
+      "min_pnl": -1.7700000999999972,
+      "max_drawdown": -1.7700000999999972,
+      "return_pct": 20.38739330269205
+    },
+    {
+      "strategy": "short_strangle",
+      "final_pnl": -4.030000000000008,
+      "max_pnl": -0.5600020000000043,
+      "min_pnl": -20.459999995000004,
+      "max_drawdown": -20.459999995000004,
+      "return_pct": -11.884399882040722
+    },
+    {
+      "strategy": "iron_condor",
+      "final_pnl": -1.1850000000000023,
+      "max_pnl": -0.9300000000000139,
+      "min_pnl": -3.4300000000000104,
+      "max_drawdown": -3.4300000000000104,
+      "return_pct": -3.7835249042145658
+    },
+    {
+      "strategy": "bull_call_spread",
+      "final_pnl": -5.9750000000000005,
+      "max_pnl": -0.07500000000000107,
+      "min_pnl": -9.729999990000001,
+      "max_drawdown": -9.729999990000001,
+      "return_pct": -51.776429809358746
+    },
+    {
+      "strategy": "long_straddle",
+      "final_pnl": -7.014999999999997,
+      "max_pnl": 8.050000100000002,
+      "min_pnl": -7.014999999999997,
+      "max_drawdown": -7.014999999999997,
+      "return_pct": -36.422637590861875
+    }
+  ]
+}

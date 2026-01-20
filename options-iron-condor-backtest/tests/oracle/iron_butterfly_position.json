@@ -1,0 +1,62 @@
+{
+  "strategy": "iron_butterfly",
+  "entry_date": "2024-12-16",
+  "expiration": "2025-01-31",
+  "dte": 45,
+  "underlying_price": 606.775,
+  "legs": [
+    {
+      "action": "SELL",
+      "option_type": "PUT",
+      "strike": 606.0,
+      "quantity": 1,
+      "option_symbol": "SPY   250131P00606000",
+      "entry_price": 8.79,
+      "delta": -0.452098,
+      "gamma": 0.016161,
+      "theta": -0.089304,
+      "vega": 0.847339,
+      "iv": 0.119677
+    },
+    {
+      "action": "BUY",
+      "option_type": "PUT",
+      "strike": 665.0,
+      "quantity": 1,
+      "option_symbol": "SPY   250131P00665000",
+      "entry_price": 61.41,
+      "delta": -0.884732,
+      "gamma": 0.005269,
+      "theta": -0.071865,
+      "vega": 0.419404,
+      "iv": 0.221749
+    },
+    {
+      "action": "SELL",
+      "option_type": "CALL",
+      "strike": 609.0,
+      "quantity": 1,
+      "option_symbol": "SPY   250131C00609000",
+      "entry_price": 10.34,
+      "delta": 0.51498,
+      "gamma": 0.01565,
+      "theta": -0.138873,
+      "vega": 0.857704,
+      "iv": 0.118112
+    },
+    {
+      "action": "BUY",
+      "option_type": "CALL",
+      "strike": 625.0,
+      "quantity": 1,
+      "option_symbol": "SPY   250131C00625000",
+      "entry_price": 3.41,
+      "delta": 0.254858,
+      "gamma": 0.014218,
+      "theta": -0.093137,
+      "vega": 0.691112,
+      "iv": 0.104756
+    }
+  ],
+  "entry_credit": -45.69
+}

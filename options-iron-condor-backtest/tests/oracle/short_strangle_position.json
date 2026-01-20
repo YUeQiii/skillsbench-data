@@ -1,0 +1,36 @@
+{
+  "strategy": "short_strangle",
+  "entry_date": "2024-12-16",
+  "expiration": "2025-01-31",
+  "dte": 45,
+  "underlying_price": 606.775,
+  "legs": [
+    {
+      "action": "SELL",
+      "option_type": "PUT",
+      "strike": 635.0,
+      "quantity": 1,
+      "option_symbol": "SPY   250131P00635000",
+      "entry_price": 29.29,
+      "delta": -0.825703,
+      "gamma": 0.010932,
+      "theta": -0.056914,
+      "vega": 0.563415,
+      "iv": 0.140386
+    },
+    {
+      "action": "SELL",
+      "option_type": "CALL",
+      "strike": 621.0,
+      "quantity": 1,
+      "option_symbol": "SPY   250131C00621000",
+      "entry_price": 4.62,
+      "delta": 0.317093,
+      "gamma": 0.015448,
+      "theta": -0.107094,
+      "vega": 0.766854,
+      "iv": 0.106983
+    }
+  ],
+  "entry_credit": 33.91
+}
